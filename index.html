@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>
-			Chirag M. Shah's homepage!
+			Chirag M. Shah's Homepage!!
 		</title>
 	</head>
 	<body>
@@ -11,14 +12,27 @@
 			<img src="chirags.jpg" alt="Chirag M. Shah">
 		</a>
 		<p>
-			Hello, World! <b>My homepage is under construction ...</b><br>
-
-			Interests:<br>
-
-			1. Algorithms<br>
-			2. Distributed Systems<br>
-			3. System Design and Product Development<br>
-			4. Machine Learning<br>
+			Hello, World! <br> <b> Interests: <p id="status"></p></b>
+			<script type="text/javascript">
+				var allInterests =
+				[
+					"Algorithms",
+					"Distributed Systems",
+					"System Design and Development",
+					"Machine Learning"
+				]
+				var funcData, count = 1, toPrint = '';
+				funcData = setInterval (
+					function () {
+						if (count <= allInterests.length) {
+							toPrint += count + ". ==> " + allInterests[count - 1] + "<br>";
+							count++;
+							document.getElementById("status").innerHTML = toPrint;
+						} else {
+							clearInterval(funcData);
+						}
+					}, 1000);
+			</script>
 		</p>
 	</body>
 </html>
