@@ -12,38 +12,37 @@
 			<img src="chirags.jpg" alt="Chirag M. Shah">
 		</a>
 		<p>
-			Hello, World! <br> <b> Interests: <p id="status"></p></b>
-			<script type="text/javascript">
-				var allInterests =
-				[
-					"Algorithms",
-					"Distributed Systems",
-					"Operating Systems"
-					"System Design and Development",
-					"Machine Learning",
-					"Security"
-					"<b>Under Construction</b>"
-				]
-				var funcData, count = 1, toPrint = '';
-				funcData = setInterval (
-					function () {
-						if (count <= allInterests.length) {
-							toPrint += count + ". ==> " + allInterests[count - 1] + "<br>";
-							count++;
-							document.getElementById("status").innerHTML = toPrint;
-						} else {
-							clearInterval(funcData);
-						}
-					}, 500);
-			</script>
+			Hello, World! <br> 
+			<p>
+			About me:	
+				I'm a recent graduate from University of Pennsylvania with a Masters degree in Embedded Systems (Dept. of Computer Science). I love to <b>design, implement, scale and optimize software to create smarter and reliable systems</b>.
+				Want to get in touch? Email me on : <b>chirags2793@gmail.com</b>b>. Thanks!
+			
 		</p>
-		<p>
-			Some stuff about me: 
-			<b>
-				I'm a recent graduate from University of Pennsylvania with a Masters degree in Embedded Systems (Dept. of Computer Science). I love to design, implement, scale and optimize software to create smarter and reliable systems.
-
-				Want to get in touch? Email me on : chirags2793@gmail.com. Thanks!
-			</b>
+		<b> Interests: <p id="status"></p></b>
+		<script type="text/javascript">
+			var allInterests =
+			[
+				"Algorithms",
+				"Distributed Systems",
+				"Operating Systems"
+				"System Design and Development",
+				"Machine Learning",
+				"Security"
+				"<b>Under Construction</b>"
+			]
+			var funcData, count = 1, toPrint = '';
+			funcData = setInterval (
+				function () {
+					if (count <= allInterests.length) {
+						toPrint += count + ". ==> " + allInterests[count - 1] + "<br>";
+						count++;
+						document.getElementById("status").innerHTML = toPrint;
+					} else {
+						clearInterval(funcData);
+					}
+				}, 500);
+		</script>
 		</p>
 	</body.>
 </html>
