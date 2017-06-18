@@ -77,7 +77,7 @@
 						this.count++;
 						document.getElementById(this.elementID).innerHTML = this.toPrint;
 					} else {
-
+						clearInterval(this.stop)
 					}
 				}
 			}
@@ -85,13 +85,13 @@
 			var printInterests = new TimedPrinter(allInterests, "interests");
 			var printCourses = new TimedPrinter(courses, "courses");
 
-			setInterval(
+			printInterests.stop = setInterval(
 			function () {
 				printInterests.printStuff()
 			}
 			, 300);
 
-			setInterval(
+			printCourses.stop = setInterval(
 			function() {
 				printCourses.printStuff()
 			}
