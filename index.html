@@ -8,7 +8,7 @@
 		</title>
 	</head>
 	<body>
-		<a href="https://www.linkedin.com/in/chirags93">  
+		<a href="https://www.facebook.com/chirag7085/">  
 			<img src="chirags.jpg" alt="Chirag M. Shah">
 		</a>
 		<p>
@@ -20,7 +20,7 @@
 				<a href="http://www.cis.upenn.edu/prospective-students/graduate/embs.php">Univeristy of Pennsylvania</a> in May' 2017.
 				I'm currently working with <a href=https://www.rti.com>Real-Time Innovations (Sunnyvale, CA)</a> as a Software Engineer.
 				<br> <br>
-				Want to know more?!! <a href="chiragms_resume.pdf">Résumé</a>
+				Want to know more?!! <a href="chiragms_resume.pdf">Résumé</a> <a href="http://dedos.cis.upenn.edu/">Research</a> <a href="https://www.linkedin.com/in/chirags93">LinkedIn</a>  
 				<br><br>
 				Want to get in touch or see my private projects on Git? 
 				<br>
@@ -28,9 +28,20 @@
 				<br>
 				<br>	
 		</p>
-		<br>
-		<b> Techinal Interests: <p id="status"></p></b>
+
+		<p>
+		<b> 
+		Techinal Interests: <p id="interests"></p>
+		</b>
+		</p>
+		<p>
+		<b>
+		Courses: <p id="courses"></p>
+		</b>
+		</p>
+
 		<script type="text/javascript">
+			
 			var allInterests =
 			[
 				"Algorithms",
@@ -40,17 +51,52 @@
 				"Machine Learning",
 				"Security",
 			]
-			var funcData, count = 1, toPrint = '';
-			funcData = setInterval (
-				function () {
-					if (count <= allInterests.length) {
-						toPrint += count + ". ==> " + allInterests[count - 1] + "<br>";
-						count++;
-						document.getElementById("status").innerHTML = toPrint;
+
+			var courses =
+			[
+				"Operating Systems Desgin and Implementation (CIS 700 - 001) (Best Project Award - PennOS)",
+				"Internet and Web Systems (CIS 455/555)  <a href=\"http:\/\/www.cis.upenn.edu\/~cis455\/hall-of-fame.html\">Google Award 2017</a>",
+				"Software Systems (CIS 505)",
+				"Database and Information Systems (CIS 550)",
+				"Machine Learning (CIS 520)",
+				"Computer Architecture (CIS 501)",
+				"Principles of Embedded Computation (CIS 540)",
+				"Real-Time Embedded Systems (ESE 519)",
+				"Embedded Software for Life Critical Applications (CIs 541)",
+				"Software Engineering (CIS 573)"
+			]
+
+			function TimedPrinter(interests, elementID) {
+				this.interests = interests;
+				this.count = 1;
+				this.elementID = elementID;
+				this.toPrint = ""
+				this.printStuff = function() {
+					if (this.count <= this.interests.length) {
+						this.toPrint += this.count + ". ==> " + this.interests[this.count - 1] + "<br>";
+						this.count++;
+						document.getElementById(this.elementID).innerHTML = this.toPrint;
 					} else {
-						clearInterval(funcData);
+
 					}
-				}, 300);
+				}
+			}
+
+			var printInterests = new TimedPrinter(allInterests, "interests");
+			var printCourses = new TimedPrinter(courses, "courses");
+
+			setInterval(
+			function () {
+				printInterests.printStuff()
+			}
+			, 300);
+
+			setInterval(
+			function() {
+				printCourses.printStuff()
+			}
+			, 300);
+
 		</script>
 		</p>
 	</body.>
