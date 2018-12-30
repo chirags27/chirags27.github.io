@@ -3,9 +3,30 @@ img {
 	height: 20%;
 	width: 20%;
 	float: left;
-	margin-right: 20px;
+	margin: 10px;
 }
 
 p {
 	margin-left: 340px;
+}
+
+.topic {
+	margin-left: 340px;
+	font-weight: bold;
+}
+
+.topictext {
+	font-weight: normal;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover {
+	color: orange;
+}
+
+.first {
+	margin-top: 20px;
 }

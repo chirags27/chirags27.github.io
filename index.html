@@ -2,6 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>
 			Chirag M. Shah's Homepage!!
@@ -11,25 +15,37 @@
 		<a href="https://www.facebook.com/chirag7085/" target="_blank">
 			<img src="chirags.jpg" alt="Chirag M. Shah">
 		</a>
-		<p>
-			Hello, World! <br>
-			About me:
-				I love to <b>design, implement, scale and optimize software to create smarter and reliable systems.</b> 
-				<br>
-				I graduated with a Masters degree in Embedded Systems (Dept. of Computer Science) form
-				<a href="http://www.cis.upenn.edu/prospective-students/graduate/embs.php" target="_blank">Univeristy of Pennsylvania</a> in May' 2017.
-				I'm currently working with <a href=https://www.apple.com target="_blank">Apple Inc.</a> as a Software Engineer in their Core-OS team.
-				Prior to Apple, I worked with <a href=https://www.rti.com target="_blank">Real-Time Innovations (Sunnyvale, CA)</a> as a Software Engineer.
-				<br> <br>
-				Want to know more?!! <a href="http://dedos.cis.upenn.edu/" target="_blank">Research</a> <a href="https://www.linkedin.com/in/chirags93" target="_blank">LinkedIn</a> <a href="https://chirags27.blogspot.com/"" target="_blank">Blog</a>
-				<br><br>
-				Want to get in touch or see my private projects on <a href="https://github.com/chirags27" target="_blank">Git</a>?
-				<br>
-				Email me on : <b>chirags@alumni.upenn.edu</b>. Thanks!
-				<br>
-				<br>	
-		</p>
-
+			<div class="topic first">
+				About me:
+				<div class="topictext">
+				Hello, World! I like to <b>design, implement, scale and optimize software to create smarter and reliable systems.</b> 
+				</div>
+			</div>
+			<div class="topic">
+				Education:
+				<ul>
+				<li class="topictext">Master of Science in Engineering in Embedded Systems from <a href="http://www.cis.upenn.edu/prospective-students/graduate/embs.php" target="_blank">Univeristy of Pennsylvania.</a> (May' 2017)</li>
+				<li class="topictext">Bachelor of Engineering in Electronics and Telecommunication from <a href="http://www.djsce.ac.in/"> Dwarkadas J. Sanghvi College of Engineering, Univeristy of Mumbai.</a> (May '2015)</li>
+				</ul>
+			</div>
+			<div class="topic">
+				Work Experience:
+				<ul>
+				<li class="topictext">Currently working with <a href=https://www.apple.com target="_blank">Apple Inc.</a> as a Software Engineer. I work in the CoreDarwin team (under CoreOS). My work involves developing and maintaining some of the frameworks and daemons which are shipped with the operating system. </li>
+				<li class="topictext">Prior to Apple, I worked with <a href=https://www.rti.com target="_blank">Real-Time Innovations (Sunnyvale, CA)</a> as a Software Engineer.</li>
+				</ul>
+			</div>
+			<div class="topic"> More stuff:
+				<div>
+					<ul>
+						<li class="topictext"><a href="https://chirags27.blogspot.com/"" target="_blank">Blog</a></li>
+						<li class="topictext"><a href="http://dedos.cis.upenn.edu/" target="_blank">University Research</a></li>
+						<li class="topictext"><a href="https://www.linkedin.com/in/chirags93" target="_blank"> LinkedIn</a></li>
+						<li class="topictext"><a href="https://github.com/chirags27" target="_blank">Git</a></li>
+						<li class="topictext"><a href="mailto:chirags@alumni.upenn.edu" target="_blank">Email : chirags[at]alumni[dot]upenn[dot]edu</a></li>
+					</ul>
+				</div>
+			</div>
 		<p>
 		<b> 
 		Techinal Interests: <p id="interests"></p>
@@ -74,7 +90,7 @@
 				this.toPrint = ""
 				this.printStuff = function() {
 					if (this.count <= this.interests.length) {
-						this.toPrint += this.count + ". ==> " + this.interests[this.count - 1] + "<br>";
+						this.toPrint += "&nbsp&nbsp&nbsp&nbsp" + this.count + ". ==> " + this.interests[this.count - 1] + "<br>";
 						this.count++;
 						document.getElementById(this.elementID).innerHTML = this.toPrint;
 					} else {
@@ -99,6 +115,5 @@
 			, 300);
 
 		</script>
-		</p>
-	</body.>
+	</body>
 </html>
